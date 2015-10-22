@@ -5,7 +5,7 @@
 		$usuario = 'root';
 		$password = 'spaceship';
 		$host = 'localhost';
-		$db = 'restaurant';
+		$db = 'Restaurante';
 		return $conexion = new PDO("mysql:host=$host;dbname=$db",$usuario,$password);
 		}
 

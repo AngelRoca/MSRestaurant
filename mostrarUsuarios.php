@@ -1,5 +1,4 @@
 <?php
-
 	$model = new Crud;
 	$model->select = '*';
 	$model->from = 'usuarios';

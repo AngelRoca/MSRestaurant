@@ -36,22 +36,13 @@
 	  	
 		      <form class="form-login" action="validar_usuario.php" method="post">
 		        <h2 class="form-login-heading">Sistema Restaurante v.1.0</h2>
-		        <div class="login-wrap">
-		        
+		        <div class="login-wrap">	        
 		            <input type="text" class="form-control" placeholder="Usuario" name="nick" id="nick" autofocus>
 		            <br>
 		            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
 		             <hr>
-		            <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> Entrar </button>
-		            
-		            
-		            
-		            
-		
+		            <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> Entrar </button>  
 		        </div>
-		
-		          
-		
 		      </form>	  	
 	  	
 	  	</div>

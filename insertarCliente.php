@@ -1,7 +1,7 @@
 <?php
 	
-	//include("Conexion.php");
-	//include('crud.php');
+	// include("Conexion.php");
+	// include('crud.php');
 	$mensaje=null;
 	if(isset($_POST['insertarCliente'])){
 		

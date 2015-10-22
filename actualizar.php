@@ -24,7 +24,7 @@ $active="admin";
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css"> 
        
-    <link href="ui/css/bootstrap.min.css" rel="stylesheet" media="screen">		
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">		
 		
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -112,7 +112,7 @@ $active="admin";
     <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
     
-		<script src="ui/js/custom.js"></script>
+		<script src="assets/js/custom.js"></script>
     
 
    

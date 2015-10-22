@@ -11,6 +11,7 @@
 		public $update;
 		public $set;
 		public $deleteFrom;
+		private $debug = true;
 		
 
 		public function Create(){
@@ -21,6 +22,8 @@
 			$insertColumns = $this ->insertColumns;
 			$insertValues = $this ->insertValues;
 			$sql = "INSERT INTO $insertInto ($insertColumns) VALUES ($insertValues)";
+			$this->debug = false;
+			$this->debuger($sql);
 			$consulta = $conexion->prepare($sql);
 			if(!$consulta){
 				$this->mensaje = "Error al crear el registro";
@@ -42,10 +45,10 @@
 				$condition= " WHERE ". $condition;
 			}
 			$sql = "SELECT $select FROM $from $condition";
+			$this->debuger($sql);
 			$consulta= $conexion->prepare($sql);
 			$consulta->execute();
-			
-			
+
 			while ($filas=$consulta->fetch()){
 				$this->rows[]=$filas;
 			}
@@ -61,6 +64,7 @@
 				$condition= " WHERE ". $condition;
 			}
 			$sql = "UPDATE $update SET $set $condition";
+			$this->debuger($sql);
 			$consulta=$conexion->prepare($sql);
 			if(!$consulta)
 			{
@@ -84,6 +88,7 @@
 				$condition = " WHERE ". $condition;
 			}
 			$sql = "DELETE FROM $deleteFrom $condition";
+			$this->debuger($sql);
 			$consulta = $conexion->prepare($sql);
 			if(!$consulta)
 				{
@@ -98,6 +103,13 @@
 			
 		}	//fin de delete
 		
+		private function debuger($var){
+			if($this->debug == true){
+				echo "<pre>";
+				var_dump($var);
+				echo "</pre>";
+			}
+		}
 		
 	}//class CRUD
 	
