@@ -1,7 +1,7 @@
 <?php
 	
-	include("Conexion.php");
-	include('crud.php');
+	require_once("Conexion.php");
+	require_once('crud.php');
 	$mensaje=null;
 	if(isset($_POST['insertarUsuario'])){
 		$nombre = htmlspecialchars($_POST['nombre']);

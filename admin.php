@@ -1,8 +1,10 @@
-<?php session_start() ?>
+<?php session_start(); 
+ini_set('display_errors', '0');
+?>
 <?php if(isset($_SESSION['nombre']))
 {
-require("Conexion.php");
-require("crud.php");		
+require_once("Conexion.php");
+require_once("crud.php");		
 }else{
 	header("Location: login.php");
 }
@@ -24,7 +26,6 @@ $active="admin";
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css"> 
        
-    <link href="ui/css/bootstrap.min.css" rel="stylesheet" media="screen">		
 		
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -67,13 +68,13 @@ $active="admin";
 
               <div class="row">
               <div class="col-lg-12 main-chart">
-				<div class="row mt">
-				<!--MENU JSON -->
-				<?php include("insertarUsuario.php");?>
-				
-				<?php include("mostrarUsuarios.php");?>
-				<?php //include("mostrar.php") ?>
-				</div>
+        				<div class="row mt">
+        				<!--MENU JSON -->
+        				<?php include("insertarUsuario.php"); ?>
+        				
+        				<?php include("mostrarUsuarios.php");?>
+        				<?php //include("mostrar.php") ?>
+        				</div>
               </div>
 				                 
                  

@@ -11,7 +11,7 @@
 		public $update;
 		public $set;
 		public $deleteFrom;
-		private $debug = true;
+		private $debug = false;
 		
 
 		public function Create(){

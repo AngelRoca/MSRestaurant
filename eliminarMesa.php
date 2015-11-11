@@ -1,8 +1,8 @@
 <?php session_start() ?>
 <?php if(isset($_SESSION['nombre']))
 {
-require("Conexion.php");
-require("crud.php");		
+require_once("Conexion.php");
+require_once("crud.php");		
 }else{
 	header("Location: login.php");
 }
